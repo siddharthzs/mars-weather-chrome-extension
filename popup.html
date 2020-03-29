@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mars Weather</title>
+    <script src="jquery-3.4.1.min.js" ></script>
+    <script src="popup.js"></script>
+    <style>
+        body{
+            width: 250px;
+            height: 350px;
+            color: white;
+            background-color: #4682b4;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .heading1{
+            display: block;
+            position: relative;
+            padding-top: 5px;
+            line-height: .2rem;
+        }
+        .heading1 h1{
+            font-family: 'Oxygen', sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .heading1 h4{
+            text-align: right;
+            position:absolute;
+            top:26px;
+            right:28px;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .cur_days{
+            margin-top: 10px;
+            background-color: #555;
+            box-shadow: 0 0 5px 1px #333;
+            font-family: 'Raleway', sans-serif;
+            width: fit-content;
+            height:120px;
+            width: 88px;
+            padding: 10px 8px 10px 10px;
+            display: flex;
+            justify-content:start;
+            flex-direction: column;
+        }
+        .cur_days *{
+            margin: 2px 0 2px 0; 
+        }
+
+        #cur_time{
+            margin-top:20px;
+            align-self:center;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    
+
+        .weather-icon{
+            width: 95px; 
+        }
+
+        .days {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 5px;
+            margin-top: 50px;
+        }
+        .next_days {
+            background-color: #555;
+            box-shadow: 0 0 5px 1px #333;
+            font-family: 'Raleway', sans-serif;
+            width: fit-content;
+            height:35px;
+            width: 50px;
+            text-align: center;
+            padding: 10px 0 20px 0;
+        }
+
+        /* theme position */
+        .theme{
+            position: fixed;
+            top:5px;
+            left:5px;
+            margin: 0;
+            z-index:5555;
+            width: fit-content;
+            
+        }
+
+        #next{
+            z-index:99999;
+            border:none;
+            outline: none;
+            box-shadow: none;
+            background-color: transparent;
+            
+            /* border: 1px solid white; */
+            font-weight: 600;
+            background-color: white;
+            font-size: 20px;
+            padding: 0 2px 0 2px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="theme">
+ 
+        <button id="next">&#9680;</button>
+    </div>
+
+    <div class="heading1">
+        <h1>Mars Weather</h1>
+        <h4>Elysium Planitia</h4>
+    </div>
+    <div class="container">
+ 
+        <div class="weather-icon">
+            <img src="images/forecast.png" alt="" height="50px">
+           <br> 
+           <strong id="cur_season" style="font-size: 20px;">Season</strong></br>
+           <span id="cur_ltemp">Min: </span></br>
+           <span id="cur_htemp">Max: </span></br>
+           <span id="cur_pressure">Pressure: </span>
+        </div>
+
+        <div class="cur_days">
+            <span style="font-size: 25px;font-weight: 600;opacity: .7;" id="cur_sol">Sol </span>
+            <span id="cur_day" style="font-size: 18px;font-weight: 400;text-align: right;"></span>
+            <span id="cur_time" style="text-align: right;">22:10:52</span>
+  
+            
+
+        </div>
+    </div>
+    <div class="days">
+        <div class="next_days  ">
+
+        </div>
+        <div class="next_days ">
+            
+        </div>
+        <div class="next_days ">
+            
+        </div>
+        <div class="next_days ">
+            
+        </div>
+        
+    </div>
+    <h3 id="mytext"></h3>
+  </body>
+</html>

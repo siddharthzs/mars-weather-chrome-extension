@@ -1,0 +1,16 @@
+
+{
+    "name": "Mars Weather",
+    "version": "1.0",
+    "description": "Mars Weather Extension, keeps you update on mars weather",
+    
+   
+    "browser_action":{
+        "default_icon": "todo_icon.png",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+    
+}
+
+
