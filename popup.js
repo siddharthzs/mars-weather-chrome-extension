@@ -5,18 +5,21 @@ var mycolor = [
   "#000080", "#003152", "#1d2951", "#111e6c"
 ];
 
+
 var months = ['January','Febuary','March','April','May','June','July','August','September','Octber','November','December'];
 var i = 0;
+
+
 document.addEventListener('DOMContentLoaded', function () {
   var checkPageButton = document.getElementById('next');
   checkPageButton.addEventListener('click', function () {
-    i++;
     if(i > mycolor.length)
       i=0;
+
     document.body.style.backgroundColor = mycolor[i];
-  
-    // document.getElementById('next').style.backgroundColor = mycolor[i];
+    document.getElementById('next').style.backgroundColor = mycolor[i];
     document.getElementById('next').style.color = mycolor[i];
+    i++;
 
   }, false);
 }, false);
@@ -38,7 +41,6 @@ Http.onreadystatechange = (e) => {
   var day = date_time.slice(8,10);
 
   var cur_time = date_time.slice(11,19);
-
 
 
   document.getElementById('cur_season').innerHTML = JSO[JSO.sol_keys[0]].Season;
